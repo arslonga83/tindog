@@ -5,4 +5,53 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+  height: 5vh;
+}
+
+.icon {
+  width: 34px;
+}
+
+.logo {
+  width: 84px;
+}
+
+main {
+  margin: 0 0.5em;
+}
+
+main img {
+  width: 100%;
+  border-radius: 5%;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 2em 0;
+}
+
+.btn {
+  width: 92px;
+  height: 92px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px 4px lightgray;
+}
+
+
+
