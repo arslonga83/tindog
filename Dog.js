@@ -21,11 +21,11 @@ export default class Dog {
   }
 
   likeDog() {
-    this.hasBeenLiked = true;
+    this.hasBeenLiked = !this.hasBeenLiked;
   }
 
   nopeDog() {
-    this.hasBeenNoped = true;
+    this.hasBeenNoped = !this.hasBeenNoped;
   }
 
  

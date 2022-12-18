@@ -14,18 +14,33 @@ function getNextDog() {
   render()
 }
 
-document.querySelector('#like-btn').addEventListener('click', () => {
-    dogsArray[0].likeDog()
-    render()
-    setTimeout(() => getNextDog(), 1500)
-  })
+const likeBtn = document.querySelector('#like-btn')
+const nopeBtn = document.querySelector('#nope-btn')
+
+likeBtn.addEventListener('click', (e) => {
+  likeBtn.disabled = true
+  nopeBtn.disabled = true
+  console.log(e.target)
+  dogsArray[0].likeDog()
+  render()
+  setTimeout(() => {
+    getNextDog()
+    nopeBtn.disabled = false
+    likeBtn.disabled = false
+  }, 1500)
+})
  
 
-document.querySelector('#nope-btn').addEventListener('click', (e) => {
+nopeBtn.addEventListener('click', (e) => {
+  nopeBtn.disabled = true
+  likeBtn.disabled = true
   dogsArray[0].nopeDog()
   render()
-  setTimeout(() => getNextDog(), 1500)
+  setTimeout(() => {
+    getNextDog()
+    nopeBtn.disabled = false
+    likeBtn.disabled = false
+  }, 1500)
 })
-
 
 render()
