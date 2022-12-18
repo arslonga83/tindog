@@ -13,5 +13,15 @@ export default class Dog {
         </div>
       `
   }
+
+  likeDog() {
+    this.hasBeenLiked = true;
+    console.log('liked')
+  }
+
+  nopeDog() {
+   
+    console.log('noped')
+  }
   
 }
