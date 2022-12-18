@@ -15,22 +15,17 @@ function getNextDog() {
 }
 
 document.querySelector('#like-btn').addEventListener('click', () => {
-    dogsArray[0].hasBeenLiked = true;
+    dogsArray[0].likeDog()
     render()
     setTimeout(() => getNextDog(), 1500)
   })
  
 
-// document.querySelector('#nope-btn').addEventListener('click', (e) => {
-//   e.target.style.background = '#E82D70'
-//   profile.nopeDog
-//   count++
-//   if (count > dogs.length) {
-//     count = 0
-//   }
-//   profile = getNewDog()
-//   render()
-// })
+document.querySelector('#nope-btn').addEventListener('click', (e) => {
+  dogsArray[0].nopeDog()
+  render()
+  setTimeout(() => getNextDog(), 1500)
+})
 
 
 render()
