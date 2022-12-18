@@ -4,13 +4,15 @@ export default class Dog {
   }
 
   getDogHtml() {
-    const {name, avatar, age, bio} = this;
+    const {name, avatar, age, bio, hasBeenLiked} = this;
     return `
         <img src="${avatar}" alt="">
         <div class="img-text">
             <h1>${name}, ${age}</h1>
             <p>${bio}</p>
         </div>
+        <img class="like-badge" src="./images/badge-like.png" alt="" style="display: ${hasBeenLiked ? 'block' : ''}">
+        <img class="nope-badge" src="./images/badge-nope.png" alt="">
       `
   }
 
@@ -23,5 +25,7 @@ export default class Dog {
    
     console.log('noped')
   }
+
+ 
   
 }

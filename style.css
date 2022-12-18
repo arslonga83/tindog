@@ -42,6 +42,15 @@ main img {
   left: 1em;
 }
 
+.like-badge, .nope-badge {
+  position: absolute;
+  top: 2.5em;
+  left: 1em;
+  width: 150px;
+  transform: rotate(-30deg);
+  display: none;
+}
+
 .img-text h1 {
   color: #F8F8F8;
   font-weight: 600;

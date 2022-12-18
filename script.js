@@ -5,8 +5,6 @@ const dogsArray = dogs.map((dog) => {
   return new Dog(dog)
 })
 
-let viewedDogs = []
-
 function render() {
   document.querySelector('main').innerHTML = dogsArray[0].getDogHtml()
 }
@@ -16,9 +14,10 @@ function getNextDog() {
   render()
 }
 
-document.querySelector('#like-btn').addEventListener('click', (e) => {
-  // e.target.style.background = '#56E9CD'
-    getNextDog()
+document.querySelector('#like-btn').addEventListener('click', () => {
+    dogsArray[0].hasBeenLiked = true;
+    render()
+    setTimeout(() => getNextDog(), 1500)
   })
  
 
