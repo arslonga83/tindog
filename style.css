@@ -99,5 +99,13 @@ footer {
   background: #FFE7EF;
 }
 
+@media(min-width: 821px) {
+  body {
+    max-width: 821px;
+    margin: 0 auto;
+  }
+
+ 
+}
 
 
