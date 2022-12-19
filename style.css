@@ -71,17 +71,32 @@ footer {
   padding: 2em 0;
 }
 
-.btn {
+.like-btn, .nope-btn {
   width: 92px;
   height: 92px;
   border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 5px 4px lightgray;
   border: none;
   background: none;
   cursor: pointer;
+}
+
+.like-btn {
+  box-shadow: 0px 10px 20px #CCF1E6;
+}
+
+.like-btn:hover {
+  background: #DBFFF4;
+}
+
+.nope-btn {
+  box-shadow: 0px 10px 20px #EDD9DF;
+}
+
+.nope-btn:hover {
+  background: #FFE7EF;
 }
 
 
