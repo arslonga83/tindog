@@ -4,8 +4,6 @@ export default class Dog {
     this.hasBeenNoped = false;
   }
 
-  
-
   getDogHtml() {
     const {name, avatar, age, bio, hasBeenLiked, hasBeenNoped} = this;
     
@@ -21,13 +19,17 @@ export default class Dog {
   }
 
   likeDog() {
-    this.hasBeenLiked = !this.hasBeenLiked;
+    this.hasBeenLiked = true;
+    if (this.hasBeenNoped) {
+      this.hasBeenNoped = false
+    }
   }
 
   nopeDog() {
-    this.hasBeenNoped = !this.hasBeenNoped;
+    this.hasBeenNoped = true;
+    if (this.hasBeenLiked) {
+      this.hasBeenLiked = false
+    }
   }
-
- 
   
 }

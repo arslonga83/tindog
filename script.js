@@ -20,7 +20,6 @@ const nopeBtn = document.querySelector('#nope-btn')
 likeBtn.addEventListener('click', (e) => {
   likeBtn.disabled = true
   nopeBtn.disabled = true
-  console.log(e.target)
   dogsArray[0].likeDog()
   render()
   setTimeout(() => {
@@ -30,7 +29,6 @@ likeBtn.addEventListener('click', (e) => {
   }, 1500)
 })
  
-
 nopeBtn.addEventListener('click', (e) => {
   nopeBtn.disabled = true
   likeBtn.disabled = true
